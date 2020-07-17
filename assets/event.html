@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>
+        ACM SAHYADRI
+    </title>
+  <link rel="icon" href="./images/ACM logo sahyadri black.png" type="image/x-icon">
+
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nova+Square&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/js/mdb.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+        body {
+
+            line-height: 1.8;
+            color: black;
+            font-family: 'Nova Square';
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        h1 {
+            font-size: 24px;
+            text-transform: uppercase;
+            color: #0e080f;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        #rides{
+          background-color: #092532;
+         } 
+        h4 {
+            font-size: 19px;
+            line-height: 1.375em;
+            color: #0e080f;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+          h2{
+        color:white;
+
+      }
+      h3{
+        color:white;
+       
+        
+      }
+    @media (max-width:550px){
+        h3{
+       text-align:center;
+} 
+}
+@media (min-width:551px){
+        h3{
+       margin-left:37px;
+       text-align:justify;
+} 
+}
+
+        .jumbotron {
+            background-color: white;
+            color: blue;
+            padding: 100px 25px;
+            font-family: 'Nova Square';
+        }
+
+
+
+        .container-fluid {
+            padding: 60px 50px;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+        }
+
+        .bg-grey {
+            background-color: blue;
+        }
+          .btn{
+          font-size:0.9em;
+        }
+
+        @import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500&display=swap");
+
+        .social-icons {
+            padding: 0;
+            list-style: none;
+            margin: 1em;
+        }
+
+        .social-icons li {
+            display: inline-block;
+            margin: 0.15em;
+            position: relative;
+            font-size: 1em;
+        }
+
+        .social-icons i {
+            color: #fff;
+            position: absolute;
+            top: 0.95em;
+            left: 1.2em;
+            transition: all 265ms ease-out;
+        }
+
+        .social-icons a {
+            display: inline-block;
+        }
+
+        .social-icons a:before {
+            transform: scale(1);
+            -ms-transform: scale(1);
+            -webkit-transform: scale(1);
+            content: " ";
+            width: 45px;
+            height: 45px;
+            border-radius: 100%;
+            display: block;
+            background: linear-gradient(45deg, #2608ff, #f1e7f1);
+            transition: all 265ms ease-out;
+        }
+
+        .social-icons a:hover:before {
+            transform: scale(0);
+            transition: all 265ms ease-in;
+        }
+
+        .social-icons a:hover i {
+            transform: scale(2.2);
+            -ms-transform: scale(2.2);
+            -webkit-transform: scale(2.2);
+            color: #2608ff;
+            background: -webkit-linear-gradient(45deg, #2608ff, #f1e7f1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: all 265ms ease-in;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* .fa {
+
+            font-size: 15px;
+            left: 20px;
+            top: 20px;
+            text-align: center;
+            text-decoration: none;
+
+        }
+
+        .fa:hover {
+            opacity: 0.4;
+        }
+
+        .fa-facebook {
+            padding: 10px;
+            background: white;
+            color: blue;
+        }
+
+        .fa-instagram {
+            padding: 10px;
+            background: white;
+            color: blue;
+        }
+
+        .fa-twitter {
+            padding: 10px;
+            background: white;
+            color: blue;
+        }
+
+        .fa-linkedin {
+            padding: 10px;
+            background: white;
+            color: blue;
+        }
+
+        .fa-youtube {
+            padding: 10px;
+            background: white;
+            color: blue;
+        }
+
+        .fa-github {
+            padding: 10px;
+            background: white;
+            color: blue;
+        } */
+
+        .navbar {
+            margin-bottom: 0;
+            background-color: black;
+            z-index: 9999;
+            border: 0;
+            font-size: 12px !important;
+            line-height: 1.42857143 !important;
+            letter-spacing: 4px;
+            border-radius: 0;
+            font-family: 'Nova Square';
+        }
+
+        .navbar li a,
+        .navbar .navbar-brand {
+            color: #fff !important;
+        }
+
+        .navbar-nav li a:hover,
+        .navbar-nav li.active a {
+            color: #0e080f !important;
+            background-color: #fff !important;
+        }
+
+        .navbar-default .navbar-toggle {
+            border-color: transparent;
+            color: #fff !important;
+        }
+
+
+
+
+
+        td,
+        th {
+            padding: 11px;
+            color: white;
+        }
+
+        table th {
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
+
+
+        .navbar-default .navbar-toggle .icon-bar {
+            background-color: #57a8d5;
+        }
+
+        .carousel-inner {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .card-cascade {
+            background: #f7f7f7;
+
+            padding: 5%;
+
+        }
+
+        .modal {
+            top: 50px;
+
+        }
+
+        .view-cascade.overlay {
+            text-align: -webkit-center;
+
+        }
+          .ml2 {
+  font-weight: 900;
+  font-size: 2em;
+}
+
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+    </style>
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <img src="./images/title logo.png" style="width: 65px;">
+
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="event.html">EVENTS</a></li>
+                    <li><a href="team.html">TEAM</a></li>
+                    <li><a href="blog.html">BLOGS</a></li>
+                    <li><a href="contactus.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+    <div id="rides">
+        <br>
+ 
+        <div style="text-align: center;">
+            <b>
+               <h2 class ="ml2">EVENTS AND ACTIVITIES</h2>
+            </b>
+          <hr style="width:60%">
+
+                
+        </div>
+
+      <div class="row">
+
+
+            <div>
+                <h3>UPCOMING EVENTS</h3>
+            </div>
+          <div class="col-sm-4" style="padding: 50px;" data-aos="flip-left">
+                <div class="card card-cascade">
+                    <div class="view view-cascade overlay">
+                        <img class="card-img-top" src="../activity/ma.jpg" style="width:95%;" alt="madhav"
+                            style="width: 95%;">
+                    </div>
+                    <div class="card-body card-body-cascade text-center">
+                        <h4 class="card-title"><strong>ACM - S MASTERCLASS</strong></h4>
+                        <h6 class="font-weight-bold indigo-text py-2">SPEAKER 09</h6>
+                        <a href="https://forms.gle/W3TXSTgcWPVYasyV7" style="color:white;"><button class="btn blue-gradient">REGISTER</button></a>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="row">
+            <div>
+                
+                <h3>ONGOING EVENTS</h3>
+                
+            </div>
+            <div class="col-sm-4" style="padding: 50px;" data-aos="flip-left">
+                <div class="card card-cascade">
+                    <div class="view view-cascade overlay">
+                        <img class="card-img-top" src="../assets/images/quotecode.jpeg" style="width:95%;" alt="BIKE"
+                            style="width: 95%;">
+                    </div>
+                    <div class="card-body card-body-cascade text-center">
+                        <h4 class="card-title"><strong>ACM - S CONTEST</strong></h4>
+                        <h6 class="font-weight-bold indigo-text py-2">QOUTE THE CODE</h6>
+                        <a href="https://www.instagram.com/p/CBLgBKVDAnX/" style="color:white;"><button class="btn blue-gradient">MORE</button></a>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+        <div class="row">
+            <div>
+                
+                <h3>COMPLETED EVENTS</h3>
+                
+            </div>
+             <div class="col-sm-4" style="padding: 50px;" data-aos="flip-left" data-aos-delay="100">
+                <div class="card card-cascade">
+                    <div class="view view-cascade overlay">
+                        <img class="card-img-top" src="../assets/images/rashmi.jpeg" alt="rashmi"
+                            style="width: 93%;">
+                    </div>
+                    <div class="card-body card-body-cascade text-center">
+                        <h4 class="card-title"><strong>ACM - S WEBINAR</strong></h4>
+                        <h6 class="font-weight-bold indigo-text py-2">SPEAKER 08</h6>
+                       <a href="https://drive.google.com/file/d/1amuH13_ex9cVqi1ZAxzKE1cdro4AA72I/view?usp=drivesdk" style="color:white;"><button class="btn blue-gradient">WATCH VIDEO</button></a>
+                    </div>
+                </div>
+            </div>
+             <div class="col-sm-4" style="padding: 50px;" data-aos="flip-left" data-aos-delay="100">
+                <div class="card card-cascade">
+                    <div class="view view-cascade overlay">
+                        <img class="card-img-top" src="../assets/images/deepak.jpeg" alt="deepak"
+                            style="width: 93%;">
+                    </div>
+                    <div class="card-body card-body-cascade text-center">
+                        <h4 class="card-title"><strong>ACM - S WEBINAR</strong></h4>
+                        <h6 class="font-weight-bold indigo-text py-2">SPEAKER 07</h6>
+                       <a href="https://drive.google.com/file/d/11rZJz3poRK6OCcom26pD7BvquiYZQ_bw/view?ts=5f059cd3" style="color:white;"><button class="btn blue-gradient">WATCH VIDEO</button></a>
+                    </div>
+                </div>
+            </div>
+  
+            <div class="col-sm-4" style="padding: 50px;" data-aos="flip-left" data-aos-delay="100">
+                <div class="card card-cascade">
+                    <div class="view view-cascade overlay">
+                        <img class="card-img-top" src="../assets/images/masterclass1.jpeg" alt="masterclass1"
+                            style="width: 83%;">
+                    </div>
+                    <div class="card-body card-body-cascade text-center">
+                        <h4 class="card-title"><strong>ACM - S MASTERCLASS</strong></h4>
+                        <h6 class="font-weight-bold indigo-text py-2">SPEAKER 06</h6>
+                        <a href="https://drive.google.com/file/d/18cVSTNR7KXWpSfsLXtRcZ6oN1heFiboG/view" style="color:white;"><button class="btn blue-gradient">WATCH VIDEO</button></a>
+                    </div>
+                </div>
+            </div>
+              <div class="col-sm-4" style="padding: 50px;" data-aos="flip-left" data-aos-delay="100">
+                <div class="card card-cascade">
+                    <div class="view view-cascade overlay">
+                        <img class="card-img-top" src="../assets/images/dinesh.jpeg" alt="dinesh pai"
+                            style="width: 93%;">
+                    </div>
+                    <div class="card-body card-body-cascade text-center">
+                        <h4 class="card-title"><strong>ACM - S WEBINAR</strong></h4>
+                        <h6 class="font-weight-bold indigo-text py-2">SPEAKER 05</h6>
+                        <a href="https://www.youtube.com/watch?v=RY4rab7dEyY" style="color:white;"><button class="btn blue-gradient">WATCH VIDEO</button></a>
+                    </div>
+                </div>
+            </div>
+               <div class="col-sm-4" style="padding: 50px;" data-aos="flip-left" data-aos-delay="100">
+                <div class="card card-cascade">
+                    <div class="view view-cascade overlay">
+                        <img class="card-img-top" src="../assets/images/speaker4.jpeg" alt="data science"
+                            style="width: 94%;">
+                    </div>
+                    <div class=" card-body card-body-cascade text-center">
+                        <h4 class="card-title"><strong>ACM - S WEBINAR </strong></h4>
+                        <h6 class="font-weight-bold indigo-text py-2">SPEAKER 04</h6>
+
+
+                        <a href="https://drive.google.com/file/d/1bTwwFgvsxK8z3SA7WoIxSX9BpkvLTPbF/view" style="color:white;"><button class="btn blue-gradient">WATCH VIDEO</button></a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4" style="padding: 50px;" data-aos="flip-left">
+                <div class="card card-cascade">
+                    <div class="view view-cascade overlay">
+                        <img class="card-img-top" src="../assets/images/prashant.jpeg" alt="BIKE"
+                            style="width: 94.5%;">
+                    </div>
+                    <div class="card-body card-body-cascade text-center">
+                        <h4 class="card-title"><strong>ACM - S WEBINAR</strong></h4>
+                        <h6 class="font-weight-bold indigo-text py-2">SPEAKER 03</h6>
+                        <a href="../moreinfo/speaker2.html" style="color:white;"><button class="btn blue-gradient">MORE</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4" style="padding: 50px;" data-aos="flip-left">
+                <div class="card card-cascade">
+                    <div class="view view-cascade overlay">
+                        <img class="card-img-top" src="../assets/images/speaker1.jpeg" alt="BIKE" style="width: 94.5%;">
+                    </div>
+                    <div class="card-body card-body-cascade text-center">
+                        <h4 class="card-title"><strong>ACM - S WEBINAR</strong></h4>
+                        <h6 class="font-weight-bold indigo-text py-2">SPEAKER 02</h6>
+                        <a href="https://www.youtube.com/watch?v=p46dD0Mxnyc&t=107s" style="color:white;"><button class="btn blue-gradient">WATCH VIDEO</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4" style="padding: 50px;" data-aos="flip-left">
+                <div class="card card-cascade">
+                    <div class="view view-cascade overlay">
+                        <img class="card-img-top" src="../assets/images/acmp.jpeg" alt="BIKE" style="width: 95%;">
+                    </div>
+                    <div class=" card-body card-body-cascade text-center">
+                        <h4 class="card-title"><strong>ACM WEBINAR</strong></h4>
+                        <h6 class="font-weight-bold indigo-text py-2">SPEAKER 01</h6>
+                        <a href="https://www.youtube.com/watch?v=44fTOE7uoOI" style="color:white;"><button class="btn blue-gradient">WATCH VIDEO</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4" style="padding: 50px;" data-aos="flip-left">
+                <div class="card card-cascade">
+                    <div class="view view-cascade overlay">
+                        <img class="card-img-top" src="../assets/images/acmnitk.png" alt="acmnitk"
+                            style="width: 280px;height:185px;">
+                    </div>
+                    <div class="card-body card-body-cascade text-center">
+                        <h4 class="card-title"><strong>ACM MEETUP</strong></h4>
+                        <h6 class="font-weight-bold indigo-text py-2">MEETUP 02</h6>
+                        <a href="../moreinfo/acmmeetup.html" style="color:white;"><button class="btn blue-gradient">MORE</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4" style="padding: 50px;" data-aos="flip-left">
+                <div class="card card-cascade">
+                    <div class="view view-cascade overlay">
+                        <img class="card-img-top" src="../assets/images/ccc.jpg" style=" width : 270px; height: 180px;">
+                    </div>
+                    <div class="card-body card-body-cascade text-center">
+                        <h4 class="card-title"><strong>ACM TALKS</strong></h4>
+                        <h6 class="font-weight-bold indigo-text py-2">CYBER SAFE CAMPUS</h6>
+                        <a href="https://www.mangalorean.com/workshop-on-cyber-safe-campus-held-at-sahyadri-college/" style="color:white;"><button class="btn blue-gradient">MORE</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4" style="padding: 50px;" data-aos="flip-left">
+                <div class="card card-cascade">
+                    <div class="view view-cascade overlay">
+                        <img class="card-img-top" src="../assets/images/slide2.jpeg" alt="meetup1" style="width: 270px">
+                    </div>
+                    <div class="card-body card-body-cascade text-center">
+                        <h4 class="card-title"><strong>ACM MEETUP</strong></h4>
+                        <h6 class="font-weight-bold indigo-text py-2">MEETUP 01</h6>
+                        <a href="https://www.instagram.com/p/B3hPLk1HnvX/" style="color:white;"><button class="btn blue-gradient">MORE</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4" style="padding: 50px;" data-aos="flip-left">
+                <div class="card card-cascade">
+                    <div class="view view-cascade overlay">
+                        <img class="card-img-top" src="../assets/images/inaugration.jpeg" alt="inaugration"
+                            style="width: 270px ">
+                    </div>
+                    <div class="card-body card-body-cascade text-center">
+                        <h4 class="card-title"><strong>ACM LAUNCH</strong></h4>
+                        <h6 class="font-weight-bold indigo-text py-2">INAUGRATION & GUEST TALK</h6>
+                        <a href="https://www.instagram.com/p/B3hPqBfHA5l/" style="color:white;"><button class="btn blue-gradient">MORE</button></a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+     <br>
+     <div class="footer" style="text-align: center;">
+        Made with ❤️ Follow us on !
+        <ul class="social-icons">
+            <li> <a href="https://github.com/acmsahyadritech/"> <i class="fa fa-github"></i> </a>
+            </li>
+            <li> <a href="https://www.facebook.com/acmsahyadri/"> <i class="fa fa-facebook"></i></a></li>
+            <li> <a href="http://www.twitter.com/AcmSahyadri"> <i class="fa fa-twitter"></i></a></li>
+            <li> <a href="https://www.youtube.com/channel/UC5EtaZ54RIvnqJMrEDAzcag"> <i class="fa fa-youtube"></i></a>
+            </li>
+            <li><a href="http://linkedin.com/company/acm-sahyadri"> <i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://instagram.com/acm_sahyadri?igshid=1d8pmqhknfr8o"> <i class="fa fa-instagram"></i></a>
+            </li>
+        </ul>
+
+    </div>
+    <br>
+
+    <!--for animation-->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+         <script>
+           AOS.init();
+         </script>
+    
+         <script>
+     // Wrap every letter in a span
+var textWrapper = document.querySelector('.ml2');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: false})
+.add({
+  targets: '.ml2 .letter',
+  scale: [4,1],
+  opacity: [0,1],
+  translateZ: 0,
+  easing: "easeOutExpo",
+  duration: 950,
+  delay: (el, i) => 70*i
+}).add({
+  targets: '.ml2',
+  opacity: 1,
+  duration: 1000,
+  easing: "easeOutExpo",
+  delay: 1000
+});
+     </script>
+
+</body>
+
+</html>
